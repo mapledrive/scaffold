@@ -1,0 +1,35 @@
+I'd be glad to explain the custom.d.ts file in your React Vite project line by line:
+
+1. declare module '*.svg' { ... }
+
+    This line declares a TypeScript module named *.svg. The asterisk (*) acts as a wildcard, meaning this module applies to any file ending with the .svg extension.
+    The purpose of this module is to define how TypeScript should handle SVG imports.
+
+2. import { SVGProps } from 'react';
+
+    This line imports the SVGProps interface from the react package. This interface defines the properties that can be passed to SVG elements in React components.
+
+3. export const ReactComponent: FunctionComponent<SVGProps<SVGSVGElement>>;
+
+    This line declares an exported constant named ReactComponent.
+    It defines the type of ReactComponent as a FunctionComponent. This means it's a React component that takes props (arguments).
+    The component's props are further typed as SVGProps<SVGSVGElement>. This indicates that the component accepts props compatible with SVG elements and specifically targeting the SVGSVGElement type.
+
+In essence, this line tells TypeScript that when you import an SVG file, it will be treated as a React component that you can use directly in your JSX.
+
+4. const src: string;
+
+    This line declares a constant named src of type string.
+    This variable will likely hold the path to the imported SVG image file.
+
+5. export default src;
+
+    This line sets the default export of the module to the src constant.
+    This means that when you import an SVG file, by default, you'll get the path to the image file.
+
+Explanation for Other Lines (6-10):
+
+    Lines 6-10 follow the same pattern as line 1, declaring modules for various image and font file extensions (*.module.scss, *.jpeg, *.webp, *.jpg, *.png, *.woff2, *.woff, *.ttf).
+    They likely don't define any specific functionality for these file types. However, they might be used in your project's build process or for code analysis purposes.
+
+In summary, the custom.d.ts file provides type information for SVG imports in your React Vite project. It allows you to use SVGs as React components directly in your JSX, improving code readability and maintainability.
