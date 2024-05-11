@@ -1,0 +1,1 @@
+eto project s desktopa dla frontend backend
