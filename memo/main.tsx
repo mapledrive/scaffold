@@ -1,4 +1,5 @@
-import React, { useState, memo } from 'react';
+import { useState, memo } from 'react';
+import ReactDOM from 'react-dom/client';
 
 // Пример использования React.memo
 // при изменении состояния в MemoExample оба компонента будут перерендериваться.(Component1, Component2)
@@ -8,7 +9,7 @@ import React, { useState, memo } from 'react';
 // Панели приложений, подобные приведенной выше, являются отличными тренировочными площадками для React.memo, поскольку состоят в основном из статичного контента.
 // нужно открыть консоль чтобы видеть перерендер
 const MemoExample = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState<number>(0);
   return (
     <div>
       <div>Count: {counter}</div>
@@ -29,4 +30,4 @@ const Component2 = () => {
   return <div>Component 2</div>;
 };
 
-export default MemoExample;
+ReactDOM.createRoot(document.getElementById('root')!).render(<MemoExample />);
