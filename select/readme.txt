@@ -1,0 +1,1 @@
+Пример typescript react select простейший
