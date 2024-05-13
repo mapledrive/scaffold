@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Outlet, NavLink } from 'react-router-dom';
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
@@ -6,11 +6,7 @@ import { Provider, useSelector, useDispatch, TypedUseSelectorHook } from 'react-
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import axios, { AxiosResponse } from 'axios';
 import createSagaMiddleware from 'redux-saga';
-import { fork, all } from 'redux-saga/effects';
-import { call, put, takeLatest, delay } from 'redux-saga/effects';
-import ProximaNova from './proximanova_regular.ttf';
-
-// Это универсальная заготовка для Vite.js React RTK Saga Router
+import { fork, all, call, put, takeLatest, delay } from 'redux-saga/effects';
 
 /**
  * TYPESCRIPT
