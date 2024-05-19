@@ -32,3 +32,10 @@ if "%number%"=="1" (
 set number=
 
 goto get_number
+
+REM TODO из папки artefacts брать файлы и вставлять их в проект по нажатию на 1 2 3 
+REM prettiertc.json brand.svg custom.d.ts vite.config.ts
+REM eshe rtk query базовый пример доработать
+
+REM это чтото вроде пульта - оттуда можно все делать, создать проект
+REM наполнить артефактами вставить в src чтото
